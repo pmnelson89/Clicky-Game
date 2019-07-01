@@ -9,7 +9,7 @@ This project is deployed at https://pmnelson89.github.io/Clicky-Game/
 
 ## Installation
 Run the following prompts in the command line:
-* git clone https://github.com/pmnelson89/Clicky-Game.git
-* cd clicky_game
-* npm install
-* npm start
+* `git clone https://github.com/pmnelson89/Clicky-Game.git`
+* `cd clicky_game`
+* `npm install`
+* `npm start`
