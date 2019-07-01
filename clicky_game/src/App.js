@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     drivers,
     score: 0,
-    topScore: 0,
+    highScore: 0,
     clicked: [],
     message: "Select an image to begin.",
     messageColor: "white"
@@ -19,14 +19,12 @@ class App extends Component {
 
   shuffle = id => {
     this.setState({
-      drivers: this.state.drivers.sort(function(a,b){
-        return 0.5 - Math.random();
-      })
-    })
-  }
+      drivers: this.state.drivers.sort(() => ( 0.5 - Math.random() ))
+    });
+  };
 
   increment = id => {
-    let ids = this.state.selected
+    let ids = this.state.clicked
     const incorrect = ids.includes(id);
     if(!incorrect) {
       this.state.clicked.push(id);
@@ -36,21 +34,21 @@ class App extends Component {
         this.setState({
           score: 0,
           clicked: [],
-          topScore: newScore,
+          highScore: newScore,
           message: "You win!",
-          messageColor: "success"
+          messageColor: "green"
 
         });
-      } else if (newScore > this.state.topScore) {
+      } else if (newScore > this.state.highScore) {
         this.setState({
-          topScore: newScore,
-          message: "Correct! New high score!!!",
-          messageColor: "success"
+          highScore: newScore,
+          message: "Correct!",
+          messageColor: "green"
         });
       } else {
         this.setState({
           message: "Correct!",
-          messageColor: "success"
+          messageColor: "green"
         });
       }
     } else {
@@ -58,7 +56,7 @@ class App extends Component {
         score: 0,
         clicked: [],
         message: "Wrong!  Try again!",
-        messageColor: "danger"
+        messageColor: "red"
       })
     }
   };
@@ -67,8 +65,10 @@ class App extends Component {
     return (
       <div className="app">
         <Navbar 
+          message={this.state.message}
+          messageColor={this.state.messageColor}
           score={this.state.score}
-          topScore={this.state.topScore}
+          highScore={this.state.highScore}
         />
         <Header />
         <CardBody>
