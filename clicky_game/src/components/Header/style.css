@@ -1,0 +1,12 @@
+.header {
+    background: rgb(75,75,75,0.5);
+    color: white;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: block;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}

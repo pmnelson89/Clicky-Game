@@ -1,0 +1,49 @@
+li {
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: middle;
+}
+
+li span {
+    margin: 5px;
+}
+
+nav {
+    background: darkred;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 20 20 black;
+    z-index: 1;
+    min-height: 80px;
+    padding: 5px;
+}
+
+ul {
+    margin: 10px;
+    padding: 0;
+}
+
+.logo {
+    max-height: 50px;
+    margin-top: 4px;
+}
+
+.title {
+    font-size: 35px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+strong {
+    font-size: 20px;
+}
+
+p {
+    color: white;
+}

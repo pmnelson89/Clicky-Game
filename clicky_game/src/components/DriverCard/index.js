@@ -3,14 +3,12 @@ import "./style.css";
 
 function DriverCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <span onClick={() => props.removeDriver(props.id)} className="remove">
-        𝘅
-      </span>
-    </div>
+    <img
+      className="driverImg"
+      alt={props.name} 
+      src={props.image}
+      onClick={() => { props.increment(props.id); props.shuffle(props.id); }}
+    />
   );
 }
 
