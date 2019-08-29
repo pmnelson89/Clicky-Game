@@ -13,3 +13,11 @@ Run the following prompts in the command line:
 * `cd clicky_game`
 * `npm install`
 * `npm start`
+
+## Technology
+* JavaScript
+* React.js
+* ReactDOM
+* node.js
+* CSS
+* HTML
